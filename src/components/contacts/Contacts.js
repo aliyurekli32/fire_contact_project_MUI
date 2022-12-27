@@ -46,7 +46,7 @@ const Contacts = ({editUser}) => {
   </TableCell>
 </TableRow>) :(
   contactList?.map((item)=>(
-    <TableRow>
+    <TableRow key={item.id}>
       <TableCell>{item.username}</TableCell>
       <TableCell>{item.phoneNumber}</TableCell>
       <TableCell>{item.gender}</TableCell>

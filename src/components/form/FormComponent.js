@@ -84,18 +84,19 @@ const handleChange=(e)=>{
                 label="Gender"
                 name="gender"
                 variant="outlined"
+                defaultValue="Male"
                 value={info?.gender}
                 onChange={handleChange}
               >
                 <MenuItem value="Female">Female</MenuItem>
-                <MenuItem value="Male">Male</MenuItem>
+                <MenuItem  value="Male">Male</MenuItem>
                 <MenuItem value="Other">Other</MenuItem>
               </Select>
             </FormControl>
             
             
             
-            <Button  variant="contained" type="submit" value="Submit">
+            <Button disabled={(info?.phoneNumber && info?.gender && info?.username) ? false : true}  variant="contained" type="submit" value="Submit">
               {isAdd}
             </Button>
           </Stack>
